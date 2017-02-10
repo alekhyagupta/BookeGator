@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sqlite.sqliteapp.Views.MenuFly
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5C5C5C"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="viewAccount"
+            android:text="My Account"
+            android:height="60sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="openBook"
+            android:text="Add Book"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="searchBooks"
+            android:text="Search Books"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="wishBook"
+            android:text="Wish Book"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myBooks"
+            android:text="My Books"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="logOut"
+            android:text="Logout"
+            android:height="60sp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center|left"
+            android:background="#256eb8"
+            android:padding="5dp"
+            android:id="@+id/topsection">
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton"
+                android:src="@android:drawable/arrow_down_float"
+                android:layout_weight="0"
+                android:background="#256eb8"
+                android:onClick="toggleMenu"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_weight="0.2"
+                android:layout_marginLeft="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="BOOKeGATOR"
+                android:id="@+id/Title"
+                android:layout_weight="0.06"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/middlesection"
+            android:background="#DDDDDDDD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Account Details"
+                android:id="@+id/book"
+                android:padding="5dp"
+                android:textSize="22sp"
+                android:textColor="#1a1a1a" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView"
+            android:fillViewport="true">
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bottomsection"
+                android:background="#ffffe6">
+
+                <RelativeLayout android:layout_weight="1.5" android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center" >
+                    <com.parse.ParseImageView
+                        android:id="@+id/icon"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="16dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"  android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        />
+                </RelativeLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:touchscreenBlocksFocus="true"
+                    android:transitionGroup="false"
+                    android:nestedScrollingEnabled="false"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Full Name"
+                        android:textColor="#372c24"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/nameText"    android:singleLine="true" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" android:inputType="textPersonName"
+                        android:layout_marginTop="16dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge" android:cursorVisible="false"
+                        android:id="@+id/nameV"    android:singleLine="true"  android:visibility = "gone"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="#372c24"
+                        tools:ignore="HardcodedText"
+                        />
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/emailText" />
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonEmail"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@android:drawable/ic_dialog_email"
+                            android:background="#ffffe6"
+                            android:paddingLeft="10dp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp" android:cursorVisible="false"
+                            android:layout_marginTop="10dp" android:inputType="textEmailAddress"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/emailV" android:visibility = "gone" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile number"
+                        android:textColor="#372c24"
+                        tools:ignore="HardcodedText" />
+                    <!--<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/emailText" />
+-->
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp" android:inputType="phone"
+                            android:layout_marginTop="10dp" android:cursorVisible="false"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/phoneV" android:visibility = "gone"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:id="@+id/phoneText"  />
+
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonCall"
+                            android:layout_gravity="center_horizontal"
+                            android:src="@android:drawable/ic_menu_call"
+                            android:background="#ffffe6"
+                            android:contextClickable="false"
+                            android:paddingLeft="10dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp">
+
+                        <RatingBar
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"  android:layout_gravity="center_horizontal"
+                            android:stepSize="0.5"
+                            android:rating="0.0" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dip"
+                        android:text="Edit Details"
+                        tools:ignore="HardcodedText" android:visibility="invisible"/>
+
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dip"
+                        android:text="Submit Details"
+                        tools:ignore="HardcodedText" android:visibility="invisible"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</com.sqlite.sqliteapp.Views.MenuFly>

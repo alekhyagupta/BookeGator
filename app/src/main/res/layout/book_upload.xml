@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sqlite.sqliteapp.Views.MenuFly
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDDDDD"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5C5C5C"
+        android:orientation="vertical" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="viewAccount"
+            android:text="My Account"
+            android:height="60sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="toggleMenu"
+            android:text="Add Book"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="searchBooks"
+            android:text="Search Books"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="wishBook"
+            android:text="Wish Book"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myBooks"
+            android:text="My Books"
+            android:height="60sp"
+            android:textSize="18sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="logOut"
+            android:text="Logout"
+            android:height="60sp"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center|left"
+            android:background="#256eb8"
+            android:padding="5dp"
+            android:id="@+id/topsection">
+
+            <ImageButton
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageButton"
+                android:src="@android:drawable/arrow_down_float"
+                android:layout_weight="0"
+                android:background="#256eb8"
+                android:onClick="toggleMenu"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_weight="0.2"
+                android:layout_marginLeft="30sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="BOOKeGATOR"
+                android:id="@+id/Title"
+                android:layout_weight="0.06"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/middlesection"
+            android:background="#DDDDDDDD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Add Book"
+                android:id="@+id/textView2"
+                android:padding="5dp"
+                android:textSize="22sp"
+                android:textColor="#1a1a1a" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView"
+            android:fillViewport="true">
+
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottomsection"
+                android:background="#ffffe6">
+
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:touchscreenBlocksFocus="true"
+                    android:transitionGroup="false"
+                    android:nestedScrollingEnabled="false"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords|textNoSuggestions"
+                        android:ems="10"
+                        android:id="@+id/title"
+                        android:layout_weight="1"
+                        android:textIsSelectable="false"
+                        android:hint="Title"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:touchscreenBlocksFocus="true"
+                    android:transitionGroup="false"
+                    android:nestedScrollingEnabled="false"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|textCapWords|textNoSuggestions"
+                        android:ems="10"
+                        android:id="@+id/author"
+                        android:layout_weight="1"
+                        android:textIsSelectable="false"
+                        android:hint="Author"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/isbn"
+                        android:layout_weight="1"
+                        android:hint="ISBN # (Optional)"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/edition"
+                        android:layout_weight="1"
+                        android:hint="Edition (Optional)"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingBottom="10sp"
+                    android:touchscreenBlocksFocus="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/year_of_publication"
+                        android:layout_weight="1"
+                        android:hint="Year of Publication (Optional)"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingBottom="10sp"
+                    android:touchscreenBlocksFocus="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapSentences|textAutoCorrect"
+                        android:ems="10"
+                        android:id="@+id/course"
+                        android:layout_weight="1"
+                        android:hint="Related Course (Optional)"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10sp"
+                    android:paddingTop="10sp"
+                    android:paddingRight="10sp"
+                    android:paddingBottom="10sp"
+                    android:touchscreenBlocksFocus="true">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/depositAmount"
+                        android:layout_weight="1"
+                        android:hint="Deposit Amount (Optional)"
+                        android:textColorHint="#4a4a4a"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/imageButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:padding="4dp"
+                    android:text="Add image for book"
+                    android:layout_margin="8dp"
+                    android:scaleType="fitXY" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Book"
+                    android:id="@+id/addBook"
+                    android:layout_gravity="center"
+                    android:alpha="0.7" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</com.sqlite.sqliteapp.Views.MenuFly>

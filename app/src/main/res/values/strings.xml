@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">mainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">BookeGator</string>
+    <string name="title_activity_main3">MainActivity3</string>
+    <string name="button_send">View account</string>
+    <string name="title_activity_book_details">BookDetails</string>
+    <string name="title_activity_find_books">find_books</string>
+    <string name="title_activity_my_book">Mybooks</string>
+    <string name="title_activity_issue_request">IssueRequest</string>
+</resources>

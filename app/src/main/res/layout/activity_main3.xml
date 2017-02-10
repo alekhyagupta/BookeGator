@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sqlite.sqliteapp.MainActivity3"
+    android:orientation="vertical"
+    android:background="#ffffe6">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:gravity="center|left"
+        android:background="#256eb8"
+        android:padding="5dp"
+        android:id="@+id/linearLayout" >
+
+        <ImageButton
+            android:layout_width="23dp"
+            android:layout_height="match_parent"
+            android:id="@+id/imageButton2"
+            android:src="@drawable/abc_ic_menu_moreoverflow_mtrl_alpha"
+            android:layout_weight="0"
+            android:background="#256eb8"
+            android:onClick="toggleMenu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView2"
+            android:layout_weight="0.2"
+            android:layout_marginLeft="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="BOOKeGATOR"
+            android:id="@+id/textView"
+            android:layout_weight="0.06"
+            android:textColor="#ffffff"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text=""
+            android:id="@+id/message"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="180sp"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:id="@+id/logout"
+            android:layout_gravity="center"
+            android:alpha="0.7" />
+    </LinearLayout>
+
+</LinearLayout>
